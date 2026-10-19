@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4a1026">
+<meta name="description" content="A little Maha Navami surprise for Aashii — nine heartfelt blessings.">
+<meta property="og:title" content="For Aashii — Nine Blessings, One Special Wish">
+<meta property="og:description" content="A tiny Navami surprise, made with love.">
+<title>| Shubh Maha Navami</title>
+<style>
+:root{--wine:#4a1026;--wine2:#741d3c;--rose:#f4cbd5;--pink:#ffe9ee;--gold:#f5d58b;--cream:#fff8ef;--ink:#4c1b2b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#7a2946 0,#4a1026 48%,#260817 100%);color:var(--cream);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+button{font:inherit}
+:root{color-scheme:dark}
+body:before{content:"";position:fixed;inset:12px;pointer-events:none;border:1px solid #f5d58b28;border-radius:20px;z-index:11}
+.topbar{position:absolute;top:22px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:12}
+.brand{font:10px Arial,sans-serif;letter-spacing:.16em;color:#f5d58b;text-transform:uppercase}
+.sound-btn{border:1px solid #f5d58b66;background:#4a102688;color:#ffe7ec;border-radius:999px;padding:9px 12px;font:10px Arial,sans-serif;cursor:pointer}
+.hero-inner{animation:heroIn 1.2s ease both}@keyframes heroIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.ornament{display:flex;align-items:center;gap:12px;justify-content:center;color:#f5d58b;margin:18px auto}.ornament:before,.ornament:after{content:"";width:42px;height:1px;background:linear-gradient(90deg,transparent,#f5d58b)}.ornament:after{transform:scaleX(-1)}
+.hero .btn{position:relative;overflow:hidden}.hero .btn:after{content:"";position:absolute;top:-60%;left:-35%;width:22%;height:220%;background:#fff9d9aa;transform:rotate(25deg);animation:shine 3.5s ease-in-out infinite}@keyframes shine{0%,60%{left:-40%}100%{left:130%}}
+.letter{box-shadow:0 22px 70px #16020d55, inset 0 0 0 5px #fff8ef}.letter p:first-of-type{font-size:21px;color:#7a2342}
+.blessing{position:relative;overflow:hidden}.blessing:after{content:"";position:absolute;inset:5px;border:1px solid #f0cc8b25;border-radius:13px;pointer-events:none}.blessing.opened{box-shadow:0 8px 30px #f5d58b22}
+.secret-note{display:none;margin:18px auto 0;text-align:center;color:#f5d58b;font-style:italic;line-height:1.7;max-width:560px}.secret-note.show{display:block;animation:appear .8s ease both}
+@media(max-width:520px){.topbar{top:20px}.brand{font-size:9px}.sound-btn{font-size:9px;padding:8px 10px}}
+#petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}
+.petal{position:absolute;top:-30px;color:#ffdce5;opacity:.72;animation:fall linear forwards;text-shadow:0 0 10px #ffc5d5}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.08}}
+.glow{position:absolute;border-radius:50%;filter:blur(55px);opacity:.2;pointer-events:none}
+.glow.a{width:240px;height:240px;background:#f3b1c4;top:5%;left:-100px}.glow.b{width:250px;height:250px;background:#f5cf80;right:-110px;top:48%}
+.wrap{width:min(100% - 28px,850px);margin:auto;position:relative}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:54px 0 44px;position:relative}
+.hero-inner{max-width:660px}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;font:11px/1.7 Arial,sans-serif;color:var(--gold)}
+.mandala{font-size:30px;color:var(--gold);margin:18px 0 12px;animation:rotate 28s linear infinite;display:inline-block}
+@keyframes rotate{to{transform:rotate(360deg)}}
+h1{font-weight:normal;font-size:clamp(42px,10vw,78px);line-height:.98;margin:8px 0 20px;color:#fff0df;text-shadow:0 4px 32px #efb4c455}
+h1 em{color:var(--gold);font-weight:normal}
+.lead{font-size:clamp(17px,4vw,21px);line-height:1.7;color:#ffe6eb;max-width:530px;margin:0 auto 28px}
+.btn{border:1px solid var(--gold);border-radius:999px;background:linear-gradient(135deg,#f8d993,#e6b85c);color:#4a1026;padding:15px 24px;min-height:50px;font:700 13px Arial,sans-serif;letter-spacing:.04em;box-shadow:0 8px 30px #e9bd6c22;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px #e9bd6c44}.btn:focus-visible,.blessing:focus-visible{outline:3px solid white;outline-offset:4px}
+.hint{font:11px Arial,sans-serif;color:#f0c6d0;margin-top:15px}
+section{padding:68px 0}
+.section-kicker{text-align:center;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font:10px Arial,sans-serif}
+h2{text-align:center;font-size:clamp(30px,7vw,48px);font-weight:normal;line-height:1.1;margin:13px 0 15px}
+.intro{text-align:center;line-height:1.75;color:#f7dce3;max-width:570px;margin:0 auto 30px;font-size:16px}
+.letter{background:linear-gradient(145deg,#fff8ef,#f9e1e4);color:var(--ink);border:1px solid #f5d58b;border-radius:22px;padding:clamp(22px,6vw,42px);max-width:660px;margin:auto;box-shadow:0 22px 70px #16020d55;position:relative}
+.letter:before{content:"✧";position:absolute;top:15px;right:20px;color:#bd8c3d;font-size:26px}
+.letter .to{font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9d4a61}
+.letter p{font-size:18px;line-height:1.85;margin:17px 0}
+.signature{font-style:italic;font-size:21px;text-align:right;color:#8c2b4c}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px}
+.blessing{border:1px solid #f0cc8b66;background:linear-gradient(155deg,#6c1c39dd,#3a0c20ee);border-radius:18px;padding:20px 12px;min-height:148px;color:var(--cream);text-align:center;cursor:pointer;transition:transform .2s,border-color .2s,background .2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.blessing:hover{transform:translateY(-4px);border-color:var(--gold)}
+.blessing .symbol{font-size:26px;color:var(--gold)}.blessing .name{font-size:16px;color:#ffe8c0}.blessing .mini{font:10px Arial,sans-serif;letter-spacing:.08em;color:#e7b9c7}
+.blessing.opened{background:linear-gradient(145deg,#f8d993,#f1c3ce);color:#4a1026;border-color:var(--gold)}
+.blessing.opened .name,.blessing.opened .mini{color:#65233b}
+.blessing.opened .symbol{color:#8d294a}
+#blessingMessage{min-height:90px;margin:22px auto 0;max-width:620px;text-align:center;border:1px solid #f0cc8b66;border-radius:18px;padding:22px;background:#29081755;line-height:1.8;color:#ffe7ec}
+.progress{height:4px;background:#ffffff1b;border-radius:8px;max-width:380px;margin:20px auto 0;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#f3bdca,#f5d58b);transition:width .3s}
+.final{display:none;text-align:center;background:linear-gradient(145deg,#fff5e7,#f5d0dc);color:var(--ink);border-radius:24px;padding:30px 22px;margin:28px auto 0;max-width:650px;border:1px solid var(--gold);box-shadow:0 18px 60px #15020b55}
+.final.show{display:block;animation:appear .8s ease both}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.final h3{font-size:clamp(28px,7vw,42px);font-weight:normal;margin:12px 0;color:#7a2342}.final p{font-size:17px;line-height:1.8}
+.photo-frame{width:min(100%,280px);margin:30px auto 0;padding:8px;background:linear-gradient(135deg,#f5d58b,#fff0c7,#c68d49);border-radius:160px 160px 24px 24px;box-shadow:0 16px 50px #16020d55}
+.photo-frame img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 35%;border-radius:154px 154px 18px 18px}
+.photo-caption{text-align:center;font-style:italic;color:#f8d8e1;margin:13px 0 0}
+footer{text-align:center;padding:34px 16px 45px;color:#e7bac8;font:11px/1.8 Arial,sans-serif;letter-spacing:.04em}
+footer span{color:var(--gold)}
+@media(max-width:520px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.blessing{min-height:135px;padding:16px 9px}.blessing .name{font-size:15px}.hero{padding-top:40px}.photo-frame{width:min(78%,280px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow a"></div><div class="glow b"></div><div id="petals" aria-hidden="true"></div>
+<header class="hero">
+ <div class="wrap topbar"><div class="brand">✧ Made for Aashii</div><button class="sound-btn" id="soundBtn" aria-pressed="false">♫ Sound: Off</button></div>
+ <div class="wrap hero-inner">
+  <div class="eyebrow">A little wish, made just for you</div>
+  <div class="mandala" aria-hidden="true">✺</div>
+  <div class="ornament">ॐ · जय माता दी · ॐ</div>
+  <h1>Shubh Maha<br><em>Navami, Aashii</em></h1>
+  <p class="lead">May Maa Durga bless your heart with peace, your path with courage, and your life with endless reasons to smile. 🌺</p>
+  <button class="btn" id="startBtn">OPEN YOUR BLESSINGS&nbsp; ✨</button>
+  <div class="hint">A tiny surprise, with lots of love</div>
+ </div>
+</header>
+<main>
+<section id="letterSection">
+ <div class="wrap">
+  <div class="section-kicker">A note from my heart</div>
+  <h2>Meriii Aaashiii ♡</h2>
+  <p class="intro">Sorryy thoda late hogya but it must be worth it.</p>
+  <article class="letter">
+   <div class="to">Aashiii betuuu,</div>
+   <p>Happy Maha Navami, Meraaa Baccchhhaa. ❤️</p>
+   <p>I wishh meraaaaa Baccchhhaaa Hmeshaa khushh rhee hastaa rhee kheltaa rhee orr mstt rheeee hmeshaa hmeshaa...Saaarii Wish poori ho jaaayeee meree bubuuuu kiii</p>
+   <p>Kaaashhh esaaa hotaaa kiii m mereee baccchheee ko ghrrr pe bula paaataa mummy bolti ki kanya lekee aa to boltaa loo mummy merii kanyaa hi le aayaa</p>
+   <p class="signature">Hmariii shadiii krwaa denaa mataaa ♡</p>
+  </article>
+ </div>
+</section>
+<section id="blessingsSection">
+ <div class="wrap">
+  <div class="section-kicker">Nine little prayers</div>
+  <h2>9 Blessings for You 🌸</h2>
+  <p class="intro">Har diya ek dua hai. Ek-ek card tap karo aur apni blessings unlock karo.</p>
+  <div class="grid" id="blessingGrid" aria-label="Nine blessings">
+   <button class="blessing" data-i="0"><span class="symbol">🪷</span><span class="name">Khushiyaa</span><span class="mini">BLESSING 01</span></button>
+   <button class="blessing" data-i="1"><span class="symbol">🌿</span><span class="name">Health</span><span class="mini">BLESSING 02</span></button>
+   <button class="blessing" data-i="2"><span class="symbol">🕊️</span><span class="name">Sukoon</span><span class="mini">BLESSING 03</span></button>
+   <button class="blessing" data-i="3"><span class="symbol">🦁</span><span class="name">Strength</span><span class="mini">BLESSING 04</span></button>
+   <button class="blessing" data-i="4"><span class="symbol">✨</span><span class="name">Success</span><span class="mini">BLESSING 05</span></button>
+   <button class="blessing" data-i="5"><span class="symbol">❤️</span><span class="name">Pyaaar</span><span class="mini">BLESSING 06</span></button>
+   <button class="blessing" data-i="6"><span class="symbol">🌼</span><span class="name">Confidence</span><span class="mini">BLESSING 07</span></button>
+   <button class="blessing" data-i="7"><span class="symbol">🌙</span><span class="name">Dedication</span><span class="mini">BLESSING 08</span></button>
+   <button class="blessing" data-i="8"><span class="symbol">🪔</span><span class="name">Apnapan</span><span class="mini">BLESSING 09</span></button>
+  </div>
+  <div class="progress" aria-label="Blessings opened"><div class="bar" id="bar"></div></div>
+  <div class="hint" id="count" style="text-align:center">0 of 9 blessings opened</div>
+  <div id="blessingMessage" aria-live="polite">✨ Choose any blessing above. I made all nine just for you.</div>
+  <div class="final" id="finalMessage">
+   <div style="font-size:36px">🌺 🪔 🌺</div>
+   <h3>Aashii, you deserve all the good in the world.</h3>
+   <p>Hmeshaaa khushh rhooo aaap hmeshaa Hmeshaaa...</p>
+   <p><strong>Happyyy Mahanavmi baccchhhaaa...Meri to mata vagerah sbbb hiii aap hoo isiliyeee. ❤️</strong></p>
+   <div class="photo-frame"><img src="aashii.png" alt="Aashii, dressed for a festive occasion"></div>
+   <div class="photo-caption">A little blessing for my favourite smile ♡</div>
+   <div class="secret-note" id="secretNote">Apnnn sbbb kuchhh shiiii krkeee hmeshaaa saaaathhh rhengeee betuuuu  ❤️</div>
+  </div>
+ </div>
+</section>
+</main>
+<footer>MADE WITH <span>♡</span> Uhhhhhhhhhhhhhmmmmmmaaaaaaaaawwwwwwww<br>Hmeshaa Ashirwad bnaaa rhee</footer>
+<script>
+const wishes=[
+ ["Khushiyan","Maa Durga aapki life ko chhoti-badi khushiyon se bhar dein, aur aapke paas hamesha muskurane ki wajah ho."],
+ ["Health","Aap hamesha healthy raho, apna khayal rakho, aur aapke paas apne saare dreams poore krne ki energy ho."],
+ ["Sukoon","Aapke dil ko sukoon mile, Sb kuch shi ho jaaye, aur aapko hamesha apnapan mehsoos ho."],
+ ["Strength","Har challenge ke saamne aapko apni strength yaad rahe. Aap Hmeshaa khud pr bharosa rkho aur kabhi apni value na bhoolo."],
+ ["Success","Aap khoob mehnat kro or Aapki mehnat rang laaye, Aapke goals poore ho, aur aapko apni achievements par proud feel ho."],
+ ["Pyaaar","Aapki life mein genuine pyaar, respect aur care hamesha rahe — aisa pyaar jisme aap khud bhi khush reh sako."],
+ ["Confidence","Aap apni awaaz, apne decisions aur apni uniqueness par bharosa karo. Aapko apni chamak bikherne ke liye kisi face wash ki jrurat nhi pde."],
+ ["Dedication","Hmeshaa apne goals ke liye mehnat krne ki motivation or dedication rhe chahe kuch bhi ho."],
+ ["Apnapan","Hmeshaa Apnepan ka ehsas rhee or m hmeshaa feel hota rhuu aapko Chahe kuch bhi ho"]
+];
+const buttons=[...document.querySelectorAll('.blessing')];
+const opened=new Set();
+const message=document.getElementById('blessingMessage');
+function openBlessing(i){
+ const b=buttons[i]; if(opened.has(i)){message.textContent=wishes[i][0]+" — "+wishes[i][1];return}
+ opened.add(i);b.classList.add('opened');b.setAttribute('aria-pressed','true');
+ message.textContent="🌸 "+wishes[i][0]+": "+wishes[i][1];
+ document.getElementById('count').textContent=opened.size+" of 9 blessings opened";
+ document.getElementById('bar').style.width=(opened.size/9*100)+'%';
+ if(opened.size===9){document.getElementById('finalMessage').classList.add('show');document.getElementById('secretNote').classList.add('show');chime();setTimeout(()=>document.getElementById('finalMessage').scrollIntoView({behavior:'smooth',block:'center'}),250)}else{chime()}
+}
+buttons.forEach(b=>b.addEventListener('click',()=>openBlessing(Number(b.dataset.i))));
+document.getElementById('startBtn').addEventListener('click',()=>document.getElementById('letterSection').scrollIntoView({behavior:'smooth'}));
+let soundOn=false;let audioCtx=null;
+function chime(){if(!soundOn)return;try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();[660,880,1108].forEach((freq,i)=>{const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,audioCtx.currentTime+i*.09);gain.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+i*.09+.03);gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+i*.09+.55);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(audioCtx.currentTime+i*.09);osc.stop(audioCtx.currentTime+i*.09+.6)})}catch(e){}}
+document.getElementById('soundBtn').addEventListener('click',async()=>{soundOn=!soundOn;const b=document.getElementById('soundBtn');b.textContent=soundOn?'♫ Sound: On':'♫ Sound: Off';b.setAttribute('aria-pressed',String(soundOn));if(soundOn){try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();await audioCtx.resume();chime()}catch(e){}}});
+const petalHost=document.getElementById('petals');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ setInterval(()=>{const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','✧','·'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(10+Math.random()*16)+'px';p.style.animationDuration=(7+Math.random()*7)+'s';petalHost.appendChild(p);setTimeout(()=>p.remove(),14500)},650);
+}
+</script>
+</body>
+</html>
